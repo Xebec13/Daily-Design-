@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --purpleColor: #edbbff;
+  --aquaColor: #aef1f5;
+  --orangeColor: #fbdbb3;
+  --bcgColor: #f4f6fa;
+  /* --containerBcgColor: linear-gradient(
+    125deg,
+    var(--purpleColor) 0%,
+    var(--bcgColor) 50%,
+    var(--aquaColor)90%,
+    var(--orangeColor) 100%
+  ); */
+  --containerBcgColor:linear-gradient(125deg, rgba(237,187,255,1) 0%,#f4f6fa 50%, #aef1f5 75%, rgba(251,219,179,1) 100%);
+}
+
+body {
+  background: var(--containerBcgColor);
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-container {
+  background-color: transparent;
+  border: 10px solid white;
+  border-radius: 25px;
+  display: flex;
+  flex: 0 0 33%;
+}
+.price-table {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px 10px;
+}
+.price-table h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.price-table h1,
+.price-table i {
+  font-weight: 900;
+}
+.price-table h1 {
+  font-size: 2rem;
+}
+.price-table h1 i {
+  font-size: 1.2rem;
+}
+.price-table span {
+  font-size: 0.6rem;
+}
+.price-table p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  height: 45px;
+  width: 100%;
+  margin: 15px 0 10px 0;
+  overflow-wrap: break-word;
+}
+.price-table button {
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.price-table button.btn-purple:hover,
+.price-table button.btn-aqua:hover,
+.price-table button.btn-orange:hover{
+    background-color: pink;
+    transform: scale(1.1);
+    font-size: 0.7rem;
+}
+
+.price-table button.btn-purple {
+  background-color: var(--purpleColor);
+}
+.price-table button.btn-aqua {
+  background-color: var(--aquaColor);
+}
+.price-table button.btn-orange {
+  background-color: var(--orangeColor);
+}
