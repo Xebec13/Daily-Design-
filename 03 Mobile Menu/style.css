@@ -96,6 +96,7 @@ body {
 
 .mobile-nav ul li {
   display: flex;
+  align-items: center;
   border: 1px solid var(--mainColor);
   border-radius: 15px;
   gap: 1rem;
