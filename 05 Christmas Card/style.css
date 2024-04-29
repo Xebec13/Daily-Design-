@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Jersey+15:regular);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://www.itakeyou.co.uk/wp-content/uploads/2022/10/christmas-wallpapers.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: crimson;
+  font-family: "Jersey 15", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  filter: blur(10px);
+  height: 400px;
+  width: 750px;
+  background: white;
+  z-index: -1;
+  border-radius: 25%;
+}
+
+.container i {
+  font-size: 75px;
+}
+.container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 5px;
+}
+.container p {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.container p.red {
+  color: gold;
+}
+.container button {
+  border: none;
+  font-size: 1.5rem;
+  width: 200px;
+  height: 50px;
+  background-color: crimson;
+  color: #fff;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+  font-family: "Jersey 15";
+
+}
