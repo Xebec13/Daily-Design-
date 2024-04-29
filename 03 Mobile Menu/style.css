@@ -30,6 +30,7 @@ body {
   min-height: 50svh;
   min-width: 35svh;
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px); /* To powoduje rozmycie tła*/
 }
 
 .mobile-header {
