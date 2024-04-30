@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100svh;
+  background: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNDY3YmF0Y2g1LXNjZW5lLWgtMDA1Yy14LmpwZw.jpg")
+    no-repeat 40% center/cover;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  padding: 15px;
+  background: linear-gradient(220.55deg, #ffbb89 20%, #7b6ae0 100%);
+  box-shadow: 5px 5px 0 1px crimson;
+  border-radius: 25px;
+  min-width: 300px;
+  max-width: 350px;
+  flex: 0 1 30%;
+}
+
+.header {
+  background: lime;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 5px 5px 0 1px #7b6ae0;
+}
+.header h1 {
+  font-size: 3rem;
+}
+.header i {
+  font-size: 75px;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.names-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  margin-right: 25px;
+}
+.name {
+  padding: 5px;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+button {
+  background: radial-gradient(circle at 100%, #ffbb89, #7b6ae0 50%);
+  position: absolute;
+  bottom: 5px;
+  font-size: 1rem;
+  border: none;
+  padding: 5px;
+  width: 100px;
+  border-radius: 25px;
+  transition: all 5s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.2);
+  background: radial-gradient(circle at 100%, #7b6ae0, #ffbb89 50%);
+}
