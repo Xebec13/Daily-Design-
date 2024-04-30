@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  background: wheat;
+}
+
+.container {
+  background: #4d98ec;
+  border-radius: 25px;
+  display: block;
+  height: 50vh;
+  padding: 20px;
+  backdrop-filter: blur(100px);
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 150px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+.header h4 {
+  font-size: 0.9rem;
+}
+
+.container .content {
+  display: flex;
+  padding: 5px;
+}
+
+.friend-img {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-right: 15px;
+}
+
+.friend-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.friend-name {
+  margin-left: 10px;
+  width: 100%;
+  padding: 5px;
+}
+.friend-name button {
+  position: relative;
+  left: 100px;
+  bottom: 15px;
+  border: none;
+  font-size: 0.9rem;
+  width: 80px;
+  height: 30px;
+  box-shadow: 2px 3px 1px 0 wheat;
+  cursor: pointer;
+}
+
+.friend-name h2 {
+  font-size: 1rem;
+}
+.friend-name span {
+  font-size: 0.8rem;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.bottom::before {
+  content: "";
+  background: rgb(0, 217, 255);
+  position: absolute;
+  height: 110px;
+  width: 200px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 130px;
+  right: 250px;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.header h4::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 75%;
+    background: rgb(0, 217, 255);
+    z-index: -1;
+}
