@@ -60,7 +60,7 @@ li {
 
 .main-content {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(3, 120px);
   grid-template-rows: repeat(3, 110px);
 }
 
