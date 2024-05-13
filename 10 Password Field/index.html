@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Field</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enter your password</h1>
+        <div class="header">
+            <div class="item-1">
+                <img src="https://cdn.pixabay.com/photo/2024/03/27/21/57/ai-generated-8660011_640.jpg" alt="">
+            </div>
+            <div class="item-2">
+                <p>Samurai Dono</p>
+                <h2>Jin Sakai</h2>
+            </div>
+        </div>
+        <div class="password">
+            <p>Password</p>
+            <span>
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" id="password" placeholder="Your Password">
+                <input type="checkbox" id="passwordInput" onclick="passwordFunction()">
+                <label for="passwordInput"><i class='bx bx-low-vision'></i></label>
+            </span>
+        </div>
+        <div class="buttons">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <button class="continue" type="submit">Continue</button>
+        </div>
+        <button class="reset-password" onclick="resetPassword()">Reset password</button>
+
+    </div>
+
+
+</body>
+
+</html>
