@@ -21,7 +21,7 @@ body {
 .container {
   border-radius: 25px;
   padding: 25px;
-  width: 25%;
+  width: 35%;
   backdrop-filter: blur(5px);
 }
 
@@ -123,6 +123,14 @@ input::placeholder {
   width: 75%;
   padding: 5px;
 }
+
+.buttons p {
+  position: relative;
+  right: 20px;
+  color: wheat;
+  font-size: .7rem;
+}
+
 
 .buttons button.continue {
   color: wheat;
