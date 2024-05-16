@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://images3.alphacoders.com/135/1354312.jpeg") center
+    no-repeat;
+  background-position: 20% 25%;
+  color: wheat;
+  backdrop-filter: blur(5px);
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding: 15px;
+  border-radius: 25px;
+  background: linear-gradient(200deg, #c20b0b 00%, #253c39 60%);
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.815);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.header {
+  padding: 10px;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header p {
+  font-size: 0.8rem;
+}
+
+.raiting span {
+  font-size: 3rem;
+}
+
+/*---------------------------------- MAIN SECTION---------------------------*/
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 150px);
+  padding: 5px;
+}
+.movie {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  padding: 5px;
+}
+
+.movieInfo {
+  grid-column: 2 / span 2;
+}
+
+.movieCard {
+  position: relative; /* Ustawienie kontenera jako relatywne, aby kontrolować pseudoelement ::before */
+  overflow: hidden; /* Ukrycie zawartości poza granicami kontenera */
+}
+
+.movieCard::before {
+  content: ""; /* Dodanie pseudoelementu */
+  position: absolute; /* Ustawienie pozycji na absolutną, aby zajmował pełne miejsce kontenera */
+  top: 0; /* Ustawienie pozycji na górnej krawędzi */
+  left: 0; /* Ustawienie pozycji na lewej krawędzi */
+  width: 100%; /* Pełna szerokość kontenera */
+  height: 100%; /* Pełna wysokość kontenera */
+  z-index: 1; /* Umieszczenie pseudoelementu na wierzchu */
+  transition: 0.3s ease; /* Dodanie płynnego przejścia */
+}
+
+.movieCard img {
+  width: 220px;
+  height: 320px;
+  transition: transform 0.4s ease-in-out; /* Dodanie płynnego przejścia dla transformacji */
+}
+
+.movieCard:hover img {
+  transform: scale(1.15); /* Powiększenie obrazka po najechaniu myszką */
+}
+
+.movieCard {
+  grid-row: span 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.movieList {
+  grid-column: 2 / span 2;
+  display: flex;
+  grid-column-gap: 1;
+}
+
+.moviePrice {
+  padding: 15px;
+  grid-row-start: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moviePrice p {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.moviePrice button {
+  border-radius: 25px;
+  border: none;
+  background-color: wheat;
+  font-weight: 600;
+  width: 65px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.movieTrailer {
+  grid-column: 3;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.movieTrailer button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 8vw;
+  font-weight: 700;
+  background-color: wheat;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: wheat;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
