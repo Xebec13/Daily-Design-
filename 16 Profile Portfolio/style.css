@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 5px solid crimson;
+  height: 85vh;
+  width: 65vw;
+  padding: 0 2vw;
+}
+
+.header {
+  border: 5px solid rebeccapurple;
+  display: flex;
+  position: relative;
+}
+
+.section1 {
+  width: 100%;
+}
+
+/* --------------------------------------------- HEADER SECTION --------------------------------------------- */
+.profile-photo {
+  width: 100%;
+  max-width: 15vw;
+  border: 5px solid lime;
+  background-color: lime;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid yellow;
+  height: 100px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin: 10px;
+}
+
+.info.info-general {
+  height: 75px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info.info-bar {
+  gap: 2rem;
+}
+
+.info-bar .bar {
+  border: 3px solid pink;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*----------------------------------LOWER SECTION---------------------------------------*/
+.header-about {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  border: 5px solid aqua;
+  padding: 15px;
+}
+
+.about {
+  width: 25vw;
+  
+  border: 3px solid pink;
+}
+
+.skills {
+  border: 3px solid pink;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills .skill {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px;
+}
+
+.skills .progress-bar {
+
+  width: 85px;
+  background-color: lime;
+}
