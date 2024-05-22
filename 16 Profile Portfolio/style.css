@@ -1,7 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --mainPurple: #850f8d;
+  --lightPurple: #c738bd;
+  --lighterPurple: #e49bff;
+  --vanilaColor: #f8f9d7;
+  --darkC: #0d0c0a;
 }
 
 body {
@@ -9,17 +18,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--darkC);
+  background: url("https://static.vecteezy.com/system/resources/previews/022/906/474/large_2x/beautiful-wave-like-lines-black-and-gold-japanese-style-background-illustration-free-photo.jpg")
+    center no-repeat;
 }
-
+ccc
 .container {
-  border: 5px solid crimson;
-  height: 85vh;
+  border-radius: 25px;
   width: 65vw;
-  padding: 0 2vw;
+  padding: 3vh 2vw;
+  background-color: #c8b38179;
+  /* backdrop-filter: blur(15px);
+  background-color: transparent; */
 }
 
 .header {
-  border: 5px solid rebeccapurple;
   display: flex;
   position: relative;
 }
@@ -31,79 +45,193 @@ body {
 /* --------------------------------------------- HEADER SECTION --------------------------------------------- */
 .profile-photo {
   width: 100%;
-  max-width: 15vw;
-  border: 5px solid lime;
-  background-color: lime;
+  max-width: 20vw;
 }
 
 .profile-photo img {
+  position: relative;
+  bottom: 65px;
+  left: 10px;
+  right: 0;
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .header-info {
   display: flex;
-  justify-content: space-between;
-  border: 3px solid yellow;
-  height: 100px;
+  gap: 1rem;
+  padding-top: 10px;
+  padding-left: 5vw;
+  padding-bottom: 1vh;
+  overflow: hidden;
+  border-bottom: 1px solid var(--vanilaColor);
 }
 
 .info {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  margin: 10px;
 }
 
 .info.info-general {
-  height: 75px;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: auto;
+}
+
+.info.info-general p,
+.about p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.info.info-general h1 {
+  font-size: 1.5rem;
 }
 
 .info.info-bar {
   gap: 2rem;
+  margin-right: auto;
+  padding: 0 4vw;
+  border-right: 1px solid var(--vanilaColor);
+  border-left: 1px solid var(--vanilaColor);
 }
 
 .info-bar .bar {
-  border: 3px solid pink;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.bar i,
+.info.follow-btn button i {
+  font-size: 1.2rem;
+}
+
+.bar i:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.1);
+  color: var(--lighterPurple);
+}
+
+.info.follow-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+  width: 8vw;
+  height: 3vh;
+  margin-right: 3vw;
+  background-color: var(--vanilaColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.info.follow-btn button:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.1);
+  color: var(--lighterPurple);
+  background-color: var(--mainPurple);
 }
 
 /*----------------------------------LOWER SECTION---------------------------------------*/
 .header-about {
   display: flex;
-  justify-content: space-between;
+  gap: 3rem;
   width: 100%;
   position: relative;
-  border: 5px solid aqua;
-  padding: 15px;
+  padding-top: 10px;
+  padding-left: 5vw;
+  overflow: hidden;
 }
 
 .about {
   width: 25vw;
-  
-  border: 3px solid pink;
+  max-height: 15vh;
 }
 
 .skills {
-  border: 3px solid pink;
   width: 15vw;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-right: 15px;
 }
 
 .skills .skill {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 2px;
+  font-size: 0.9rem;
 }
 
 .skills .progress-bar {
-
+  position: relative;
+  height: 5px;
   width: 85px;
-  background-color: lime;
+  background-color: var(--vanilaColor);
 }
+
+.skills .progress-bar::before {
+  content: "";
+  width: 65px;
+  height: 5px;
+  background-color: crimson;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*--------------------------------MAIN SECTION----------------------------------------*/
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  border: 3px solid wheat;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.item-1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+.item-2 {
+  grid-column: 3 / span 2;
+}
+
+.item-3 {
+  grid-row: 3;
+  grid-column: span 3;
+}
+
+.item-6 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.item button {
+    position: absolute;
+    bottom: 10px; /* Dostosuj w zależności od potrzeb */
+    left: 10px; /* Dostosuj w zależności od potrzeb */
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+  }
