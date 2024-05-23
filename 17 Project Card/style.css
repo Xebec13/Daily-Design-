@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkColor: #070f2b;
+  --blueColor: #1b1a55;
+  --lightBlueColor: #535c91c4;
+  --cementColor: #9290c3;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://img.freepik.com/premium-photo/abstract-art-background-black-color-with-wavy-silver-neon-lines-backdrop-with-curve-fluorescent-gray-ribbon_113767-5067.jpg") center/cover no-repeat;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+}
+
+.container {
+  border: 5px solid var(--blueColor);
+  width: 45vh;
+  background: rgba(128, 128, 128, 0.637);
+  backdrop-filter: blur(5px);
+  border-top: 5px solid crimson;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.top,
+.middle {
+  padding: 15px;
+}
+
+.top h1 {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.tasks {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin: 10px 0;
+}
+
+.bar {
+  background-color: rgb(192, 192, 192);
+  width: 80%;
+  border-radius: 15px;
+}
+
+.progress {
+  background-color: crimson;
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+.html {
+  width: 43%;
+}
+
+.bottom {
+  display: flex;
+  gap: 1rem;
+  width: 4.5vh;
+  height: auto;
+  margin: 25px 15px;
+}
+
+.bottom img {
+  outline: 3px solid var(--blueColor);
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+}
