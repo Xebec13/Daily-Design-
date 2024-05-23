@@ -23,12 +23,12 @@ body {
   background: url("https://static.vecteezy.com/system/resources/previews/022/906/474/large_2x/beautiful-wave-like-lines-black-and-gold-japanese-style-background-illustration-free-photo.jpg")
     center no-repeat;
 }
-ccc
+
 .container {
   border-radius: 25px;
   width: 65vw;
   padding: 3vh 2vw;
-  background-color: #c8b38179;
+  background-color: #c8b381d8;
   /* backdrop-filter: blur(15px);
   background-color: transparent; */
 }
@@ -113,7 +113,7 @@ ccc
 .bar i:hover {
   transition: 1s ease-in-out;
   transform: scale(1.1);
-  color: var(--lighterPurple);
+  color: crimson;
 }
 
 .info.follow-btn button {
@@ -133,8 +133,7 @@ ccc
 .info.follow-btn button:hover {
   transition: 1s ease-in-out;
   transform: scale(1.1);
-  color: var(--lighterPurple);
-  background-color: var(--mainPurple);
+  background-color: crimson;
 }
 
 /*----------------------------------LOWER SECTION---------------------------------------*/
@@ -167,6 +166,7 @@ ccc
   align-items: center;
   padding: 2px;
   font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .skills .progress-bar {
@@ -204,8 +204,6 @@ ccc
 .item {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
   overflow: hidden;
 }
 .item-1 {
@@ -225,13 +223,21 @@ ccc
   grid-column: span 2;
   grid-row: span 2;
 }
+
+
 .item button {
-    position: absolute;
-    bottom: 10px; /* Dostosuj w zależności od potrzeb */
-    left: 10px; /* Dostosuj w zależności od potrzeb */
-    background-color: crimson;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    
-  }
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 3.5vw;
+  height: 3vh;
+  bottom: 2px; 
+  left: 2px; 
+  background-color: #0d0c0ac7;
+  color: crimson;
+  border: none;
+  border-radius: 5px;
+  font-size: .8rem;
+}
