@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Asul:regular,700);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkRed: #8b0000;
+}
+
+body {
+  background: url("https://wallpapers.com/images/hd/hell-2000-x-1000-2fiwna66nj94tx3x.jpg");
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Asul", sans-serif;
+  font-weight: 900;
+}
+
+.container {
+  border: 15px inset var(--darkRed);
+  display: flex;
+  width: 55vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.content {
+  background: url("https://img.freepik.com/free-photo/grunge-paper-background_1048-10791.jpg")
+    center/cover;
+  padding: 3vh 4vw;
+}
+
+.header {
+  margin-bottom: 3vh;
+  width: 20vw;
+}
+
+.header h1 {
+  margin-bottom: 1.5vh;
+}
+
+.header p {
+  font-size: 0.9rem;
+}
+
+.main {
+  margin-bottom: 5vh;
+}
+
+.main input[type="email"] {
+  position: relative;
+  background: url("https://c4.wallpaperflare.com/wallpaper/1003/516/47/death-die-red-skull-wallpaper-preview.jpg")
+    center/cover;
+  color: #fff;
+  outline: none;
+  border: 2px solid var(--darkRed);
+  box-shadow: 0 0 5px 5px var(--darkRed);
+  padding: 0 15px;
+  width: 100%;
+  height: 5vh;
+  font-size: 0.95rem;
+}
+
+.main input[type="email"]::placeholder {
+  color: #fff;
+  font-family: "Asul";
+}
+
+.main .main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.main-info a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--darkRed);
+  font-weight: 800;
+}
+
+.main-info button[type="submit"] {
+  position: relative;
+  background: url("https://media.istockphoto.com/id/939762314/photo/blazing-fire-border-isolated-on-black.jpg?s=612x612&w=0&k=20&c=_RGTJUIBoXzpnrEsDT1IJ5Dz6RPwkfF1DLuhKpmkgTw=")
+    center/160%;
+  box-shadow: 5px 3px 5px 2px #9e692f;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: "Asul";
+  padding: 5px 10px;
+  width: 7vw;
+  height: 5vh;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.footer {
+  border-top: 3px solid var(--darkRed);
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer .footer-media {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.footer .btn {
+  border: 3px solid var(--darkRed);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 9vw;
+  font-size: 1rem;
+  padding: 10px 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.footer p:last-child, .footer-media {
+  margin-top: 25px;
+}
+
+
+.aside {
+  width: 100%;
+}
+
+.aside img {
+  object-fit: cover/center;
+  border-left: 5px inset var(--darkRed);
+  width: 100%;
+  height: 100%;
+}
