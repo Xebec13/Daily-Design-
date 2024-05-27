@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: wheat;
+  background: url("https://static.vecteezy.com/system/resources/previews/027/393/058/original/detailed-red-blood-splatter-on-a-black-background-free-vector.jpg")
+    50%/55% no-repeat;
+}
+
+.bcg-body {
+  background-color: #000;
+}
+
+.container {
+  border: 10px solid goldenrod;
+  background-color: rgba(0, 0, 0, 0.842);
+  width: 25vw;
+  border-radius: 15px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 25vh;
+  padding: 10px;
+  z-index: 1;
+}
+
+.header :nth-child(2) {
+  margin-bottom: auto;
+}
+
+.header :nth-child(3) {
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.movie-bcg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Obrazek znajduje się pod treścią */
+}
+
+.movie-bcg img {
+  border-bottom-right-radius: 45%;
+  object-fit: cover/center;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.seat-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #0000005e;
+  height: 5vh;
+}
+
+.seat-info .seat-available {
+  display: flex;
+  align-items: center;
+}
+
+.seat-info .seat-booked {
+  color: #454545;
+}
+
+.seat-info .seat-selected {
+  color: crimson;
+}
+
+.seat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.seat-info .seat :nth-child(1) {
+  font-size: 1.2rem;
+}
+
+.seat-info .seat :nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.cinema-screen {
+  position: relative;
+  top: 0;
+  content: "";
+  background-color: goldenrod;
+  border-bottom-right-radius: 250%;
+  border-bottom-left-radius: 250%;
+  width: 15vw;
+  height: 1vh;
+  margin-bottom: 2vh;
+}
+
+.seat-select {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 25vh;
+}
+
+.seat-select .seat :nth-child(1) {
+  margin-right: 1vw;
+}
+
+.seat-select .seat.row-1 span:nth-of-type(2n),
+.seat-select .seat.row-2 span:nth-of-type(3n),
+.seat-select .seat.row-3 span:nth-of-type(4n),
+.seat-select .seat.row-4 span:nth-of-type(5n),
+.seat-select .seat.row-5 span:nth-of-type(1n),
+.seat-select .seat.row-6 span:nth-of-type(6) {
+  color: #454545;
+}
+
+.seat-select .seat.row-7 :nth-child(5),
+.seat-select .seat.row-7 :nth-child(6) {
+  color: crimson;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 1vh;
+  background-color: rgba(220, 20, 60, 0.425);
+  padding: 10px;
+}
+
+.footer-info :nth-child(3),
+.footer-summary :nth-child(3){
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+
+
+
+.footer button {
+  background-color: wheat;
+  margin: auto 0 auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  height: 5vh;
+  width: 5vw;
+  padding: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.footer button span {
+  font-size: 2rem;
+}
