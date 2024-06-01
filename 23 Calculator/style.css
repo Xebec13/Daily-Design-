@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=VT323:regular);
+*,
+*::after,
+*::before {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mainColor: #ddcb82;
+  --secondColor: #a98c43;
+  --bcgColor: #332c26;
+  --btn1Color: #7d551f;
+  --btn2Color: #fea036;
+  --btnColor: #feec93;
+  --screenColor: crimson;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.884);
+  font-family: "VT323", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  border: 10px inset var(--mainColor);
+  border-radius: 12px;
+  background-color: var(--bcgColor);
+}
+
+.calculator {
+  border-top: 5px inset var(--mainColor);
+  border-bottom: 5px solid var(--mainColor);
+  width: 25vw;
+}
+
+.screen {
+  background-color: rgba(0, 0, 0, 0.774);
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 10vh;
+  color: var(--screenColor);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 3%;
+  font-size: 2.2rem;
+}
+
+.calc-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3%;
+}
+
+.main {
+  background-color: var(--bcgColor);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.7rem;
+  padding: 5%;
+}
+
+.grid {
+  background-color: var(--btnColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 1px 5px 1px black;
+  color: black;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+  height: 55px;
+}
+
+.grid:hover {
+    transition: 10ms ease-in-out;
+    transform: scale(1.1);
+}
+
+.grid-item-s {
+  background-color: var(--btn2Color);
+}
+
+.grid-item-10 {
+    grid-column: span 2;
+}
+
+.special-5 {
+  grid-row-start: 2;
+  grid-column-start: 4;
+}
+
+.special-6 {
+  grid-row-start: 3;
+  grid-column-start: 4;
+}
+
+.special-7 {
+  grid-row-start: 4;
+  grid-column-start: 4;
+}
+
+.special-8 {
+  grid-row-start: 5;
+  grid-column-start: 4;
+}
+
+.switch {
+  margin-right: 1vw;
+  font-size: .8rem;
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  user-select: none;
+}
+
+.switch .cb {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #373737;
+  border-radius: 0.1em;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden;
+  box-shadow: -0.3em 0 0 0 #373737, -0.3em 0.3em 0 0 #373737,
+    0.3em 0 0 0 #373737, 0.3em 0.3em 0 0 #373737, 0 0.3em 0 0 #373737;
+}
+
+.toggle > .left {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 88%;
+  background-color: #f3f3f3;
+  color: #373737;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  transform-origin: right;
+  transform: rotateX(10deg);
+  transform-style: preserve-3d;
+  transition: all 150ms;
+}
+
+.left::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(206, 206, 206);
+  transform-origin: center left;
+  transform: rotateY(90deg);
+}
+
+.left::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+
+.toggle > .right {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 88%;
+  background-color: #f3f3f3;
+  color: rgb(206, 206, 206);
+  right: 1px;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  transform-origin: left;
+  transform: rotateX(10deg) rotateY(-45deg);
+  transform-style: preserve-3d;
+  transition: all 150ms;
+}
+
+.right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(206, 206, 206);
+  transform-origin: center right;
+  transform: rotateY(-90deg);
+}
+
+.right::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+
+.switch input:checked + .toggle > .left {
+  transform: rotateX(10deg) rotateY(45deg);
+  color: rgb(206, 206, 206);
+}
+
+.switch input:checked + .toggle > .right {
+  transform: rotateX(10deg) rotateY(0deg);
+  color: var(--btn1Color);
+}
