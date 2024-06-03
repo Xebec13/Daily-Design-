@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.main-bcg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("https://images5.alphacoders.com/133/thumb-1920-1338706.png")
+    center/cover;
+  filter: saturate(40%);
+}
+
+.container {
+  position: relative;
+  background-color: #006769c2;
+  border-radius: 10px;
+  color: #fff;
+  width: 20vw;
+  min-width: 210px;
+  font-weight: 700;
+  padding: 1% 0;
+}
+
+.calendar-month {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.calendar-month > * {
+  font-size: 1rem;
+}
+
+.info {
+  display: grid;
+  text-wrap: wrap;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 0.4rem;
+  font-size: 0.8rem;
+  padding: 0 2%;
+  margin-bottom: 10px;
+  height: 3vh;
+}
+
+.calendar-days::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://images5.alphacoders.com/133/thumb-1920-1338706.png")
+    center/cover;
+  z-index: -1;
+}
+
+.calendar-days {
+  /* background: url("https://images5.alphacoders.com/133/thumb-1920-1338706.png")
+    center/cover; */
+  /* background-color: rgba(245, 222, 179, 0.521); */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  font-size: 0.8rem;
+  padding: 0 1%;
+  height: 25vh;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day:hover {
+  transition: 1ms ease-in-out;
+  border: 1px solid wheat;
+}
+
+.calendar-tasks .task {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.task-info p {
+  font-size: 0.7rem;
+}
+
+.task-info :nth-child(2) {
+  font-size: 0.55rem;
+  color: wheat;
+  text-decoration: underline;
+}
+
+.task i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40a578;
+  font-size: 2vw;
+  width: 3vw;
+  height: 3vw;
+}
+.add-task {
+  background-color: #40a578;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 10px;
+  padding: 1%;
+}
+
+.add-task i {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  font-size: 1.5rem;
+}
