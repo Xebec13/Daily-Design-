@@ -1,0 +1,167 @@
+*,
+*::after,
+*::before {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mainColor: #ff3ea5;
+  --secondColor: #ff7ed4;
+  --thirdColor: #6420aa;
+  --fontColor: #ffe6e6;
+  --timerColor: #e1afd1;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100vh;
+  background: url("https://4kwallpapers.com/images/wallpapers/dark-blue-pink-5120x2880-12661.jpg")
+    center/cover;
+  color: var(--fontColor);
+}
+
+.container {
+  box-shadow: 0 0 15px 5px var(--mainColor);
+  background-color: purple;
+  border-radius: 12px;
+  /* width: 15vw; */
+  min-width: 150px;
+}
+
+.head-btns {
+  display: flex;
+  background-color: var(--mainColor);
+  border-radius: 12px;
+  width: 100%;
+  height: 6vh;
+}
+
+.head-btns :nth-child(1) {
+  border-top-left-radius: 12px;
+}
+
+.head-btns :nth-child(3) {
+  border-top-right-radius: 12px;
+}
+
+.btn {
+  background-color: var(--mainColor);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn:hover{
+  transition: 0.5s ease-in-out;
+  background-color: purple;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: 0 -1px 0 1px var(--mainColor);
+}
+
+.btn :nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.btn :nth-child(2) {
+  font-size: 0.5rem;
+}
+
+.main {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 2px;
+  stroke: grey;
+  box-shadow: 0 0 15px 5px var(--mainColor);
+}
+
+.base-timer__path-remaining {
+  stroke-width: 4px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: var(--mainColor);
+}
+
+.base-timer__path-remaining.orange {
+  color: var(--thirdColor);
+}
+
+.base-timer__path-remaining.red {
+  color: var(--secondColor);
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.footer-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-footer {
+  font-size: 3rem;
+  padding: 5px;
+}
+
+.btn-footer.green {
+  color: var(--secondColor);
+}
+
+.btn-footer.red {
+  color: crimson;
+}
+
+.btn-footer i {
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px var(--mainColor);
+}
+
+.btn-footer i:hover {
+  transition: 3ms ease-in-out;
+  transform: scale(1.2);
+}
