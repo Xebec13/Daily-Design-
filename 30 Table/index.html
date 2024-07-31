@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-show">
+                <h4>Show 5 entries</h4>
+            </div>
+            <div class="header-search">
+                <i class='bx bx-search-alt'></i>
+                <input type="text" name="search" id="search" placeholder="Search">
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-info">
+                <div data-sort="firstName">
+                    <p data-sort="firstName">FIRST NAME</p><i class='bx bx-chevron-down'></i>
+                </div>
+                <div>
+                    <p data-sort="lastName">LAST NAME</p><i class='bx bx-chevron-down'></i>
+                </div>
+                <div>
+                    <p data-sort="email">EMAIL</p><i class='bx bx-chevron-down'></i>
+                </div>
+                <div>
+                    <p data-sort="createdAt">CREATED AT</p><i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+            <div id="user-info">
+                
+            </div>
+        </div>
+        <div class="footer">
+            <button type="submit"><i class='bx bx-chevron-left'></i>Prev</button>
+            <button type="submit">Next<i class='bx bx-chevron-right'></i></button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
