@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  position: relative;
+  background-color: #694f8e;
+}
+
+.header {
+  --p: 100px; 
+  height: 30vh;
+  width: 100%;
+  aspect-ratio: 1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--p)), 0 100%);
+  background: #eb3678;
+
+  color: #ffdfd6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header i {
+  font-size: 3rem;
+}
+
+.main {
+  position: relative;
+  background-color: rgba(240, 255, 255, 0.808);
+  bottom: 100px;
+  margin: 0 auto;
+  width: 30vw;
+  min-width: 380px;
+  padding: 20px 35px;
+  border-radius: 15px;
+}
+
+.song {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transform: scale(1.1);
+}
+
+.song:hover {
+  transition: transfrom 1ms ease, outline 1s ease-in-out;
+  outline: 1px solid #eb3678;
+}
+
+.song > :nth-child(1) {
+  border: 1px solid #694f8e;
+  border-radius: 50%;
+  width: 15px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.song > :nth-child(2),
+.song > :nth-child(3) {
+  margin: 0 10px;
+}
+
+.song-info h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: gray;
+}
+.song :nth-child(4) {
+  margin-left: auto;
+  color: gray;
+  font-size: 0.7rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.song img {
+  width: 40px;
+  height: 40px;
+}
