@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e5ebfd;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  width: 80%;
+  height: 140%;
+  background-color: pink;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgb(0, 60, 255);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-1 button {
+  background-color: rgb(0, 60, 255);
+  color: #fff;
+}
+
+.card-1,
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3%;
+  position: relative;
+}
+
+.card-1 i,
+.card-2 i,
+.card-3 i {
+  font-size: 56px;
+}
+.card-1 h3,
+.card-2 h3,
+.card-3 h3 {
+  font-size: 1.5rem;
+}
+
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  font-size: 0.85rem;
+}
+.card-1 > *,
+.card-2 > *,
+.card-3 > * {
+  margin: 10px;
+}
+
+.card-1 {
+  right: 110px;
+  bottom: 50px;
+  text-align: center;
+  height: 30vh;
+  width: 280px;
+}
+
+.card {
+  width: 420px;
+  left: 70px;
+}
+
+.card-1 p {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.card-2,
+.card-3 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.card-2 i,
+.card-3 i {
+  position: relative;
+  top: 10px;
+  left: -20px;
+}
+
+.card-2 div p,
+.card-3 div p {
+  width: 205px;
+  height: 45px;
+}
+
+.card-2 div > *,
+.card-3 div > * {
+  margin: 15px;
+}
+
+.card-line {
+  margin: 0 auto;
+  background-color: rgba(128, 128, 128, 0.699);
+  height: 1px;
+  width: 85%;
+}
