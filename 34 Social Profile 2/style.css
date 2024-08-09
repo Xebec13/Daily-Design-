@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bcgColor: #9335ab;
+  --mainColor: #efdbf7;
+  --secondColor: #b957d177;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bcgColor);
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  width: 300px;
+}
+
+.header {
+  padding: 2%;
+  background-color: var(--mainColor);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  height: 20vh;
+}
+
+.nav-btns {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: var(--bcgColor);
+}
+.head-info {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 25px;
+}
+
+.head-info img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.head-info .info {
+  align-self: center;
+  color: gray;
+}
+
+.info h3 {
+  font-size: 1rem;
+}
+.info p {
+  font-size: 0.8rem;
+}
+
+.info button {
+  background-color: var(--bcgColor);
+  color: var(--mainColor);
+  border-radius: 15px;
+  border: none;
+  width: 12ch;
+  height: 4ch;
+  margin-top: 5px;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info button i {
+  font-size: 1rem;
+}
+
+.head-apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--secondColor);
+}
+
+.head-apps i {
+  cursor: pointer;
+}
+
+.follow-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 25px 0;
+  color: gray;
+}
+
+.follow-info div p {
+  font-size: 0.75rem;
+}
+
+.main-nav {
+  position: relative;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.75rem;
+  margin: 0 0 5px 35px;
+  color: gray;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 90px);
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+}
+
+.head-apps i:hover,
+.nav-btns i:hover,
+.info button:hover,
+.grid img:hover {
+  transition: ease-in-out 1ms;
+  transform: scale(1.1);
+}
+
+.main-nav h4::after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px var(--bcgColor);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.main-nav h4:hover::after {
+  transform: scaleX(1);
+}
