@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bcgColor: #6cb3a9;
+  --firstColor: #d25b70;
+  --secondColor: #fff;
+  --pokeInsideColor: #781728;
+  --pokeBtnColor: #f6df96;
+}
+
+body {
+  background: var(--bcgColor);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    var(--firstColor) 90px,
+    var(--pokeInsideColor) 90px 110px,
+    var(--secondColor) 110px
+  );
+  border-radius: 100px;
+  display: grid;
+}
+#center {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #f6df96;
+  border: 10px solid var(--pokeInsideColor);
+}
+#pokeball:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 20px;
+  background: #6cb3a9;
+  align-self: center;
+  box-shadow: 190px 0px var(--bcgColor);
+}
