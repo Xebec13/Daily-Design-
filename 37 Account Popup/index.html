@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accout Popup</title>
+    <title>Account Popup</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="container flex-center">
+        <div class="account-popup">
+            <div class="popup-info">
+                <div class="popup-photo">
+                    <img src="https://cdn.pixabay.com/photo/2019/09/16/09/29/alone-4480438_960_720.jpg" alt="Profile Photo">
+                </div>
+                <div class="popup-profile">
+                    <h1>Annie Ingram</h1>
+                    <h2>@anngram</h2>
+                </div>
+                <div class="popup-check">
+                    <i class="bx bxs-check-circle"></i>
+                </div>
+            </div>
+            <div class="popup-link">
+                <i class="bx bx-plus"></i>
+                <p>Connect other account</p>
+            </div>
+            <hr>
+            <div class="popup-icons">
+                <div class="icon">
+                    <i class="bx bx-support"></i>
+                    <p>Support</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-star"></i>
+                    <p>Upgrade</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-cog"></i>
+                    <p>Settings</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-log-out"></i>
+                    <p>Log out</p>
+                </div>
+            </div>
+        </div>
+        <div class="account flex-center active">
+            <div class="profile-photo">
+                <img src="https://cdn.pixabay.com/photo/2019/09/16/09/29/alone-4480438_960_720.jpg" alt="Profile Photo">
+            </div>
+            <div class="profile-info">
+                <h1>Annie Ingram</h1>
+                <h2>@anngram</h2>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
