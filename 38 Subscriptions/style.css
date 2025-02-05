@@ -1,0 +1,176 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element Defaults */
+img,
+i {
+  display: block;
+}
+
+h1,
+h2 {
+  line-height: 1;
+}
+
+/* Body Styling */
+body {
+  height: 100dvh;
+  background: linear-gradient(220.55deg, #8a88fb 0%, #d079ee 100%);
+  font-family: sans-serif;
+  color: rebeccapurple;
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container Styling */
+.container {
+  position: relative;
+  width: 55vw;
+  min-width: 285px;
+  height: 50vh;
+  min-height: 475px;
+  border-radius: 25px;
+  padding: 25px;
+  background: linear-gradient(220.55deg, #fff6eb 0%, #dfd1c5 100%);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  min-width: 285px;
+  min-height: 475px;
+  height: 55vh;
+  border-radius: 25px;
+  background-color: rebeccapurple;
+  transform: translate(-50%, -50%);
+  z-index: -999;
+}
+
+/* Top Section Styling */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.top > * {
+  margin-bottom: 20px;
+}
+
+.top h1,
+.profile h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.top h2,
+.profile h2 {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 80%;
+  font-weight: 600;
+}
+
+/* Content Icons Styling */
+.content-icons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+  height: 3ch;
+  padding: 2%;
+  margin: 5px;
+  border-radius: 25px;
+  background-color: #d179eea1;
+  color: #0000008a;
+  cursor: pointer;
+}
+/* Icon paragraph: prevent text wrapping */
+.icon p {
+  text-wrap: nowrap;
+}
+
+/* Shared font styling for specific elements */
+.icon p,
+i,
+.profile p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Profile container styling */
+.profile {
+  user-select: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100px;
+}
+
+/* Swiper wrapper: flexible layout for child items */
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Bottom icons styling */
+.bottom i {
+  font-size: 2rem;
+}
+
+/* Profile image: circular and properly fitted */
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Margin for all direct children of profile */
+.profile > * {
+  margin-bottom: 10px;
+}
+
+/* Clickable profile paragraph styling */
+.profile p {
+  background-color: #d179eea1;
+  border-radius: 25px;
+  padding: 7px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Profile heading styling */
+.profile h2 {
+  font-weight: 500;
+}
+
+/* Swiper navigation buttons positioned absolutely */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  color: rebeccapurple;
+}
