@@ -1,5 +1,5 @@
 // Initialize Swiper slider with looping, pagination, navigation, and responsive breakpoints
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
     loop: true, // Enable continuous loop mode
 
 
